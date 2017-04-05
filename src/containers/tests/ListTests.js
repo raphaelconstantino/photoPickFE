@@ -23,6 +23,7 @@ class ListTests extends Component {
                         <ul key={o._id}> 
                             <li>{o.category}</li>
                             <li>{this.getUrl(o)}</li>
+                            <li>{o.votes.length} Votes</li>
                         </ul>
                     )
                 })}

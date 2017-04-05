@@ -16,12 +16,18 @@ class VoteBox extends Component {
 
 	}   
 
+  voteOnPic(test) {
+		HttpService.put("tests/" + test._id, {"userVotingId":localStorage.getItem('userId'), "comment":"I would Date!", "atractive" : "3", "smart" : "3", "trustworthy" : "3" })
+			.then(response => console.log(response));
+  }
+
   render() {
     return (
       <div className="Tests">
           <ul>
             <li>{this.state.test.category}</li>
             <li><img src={img} height="250px" width="250px"/></li>
+            <li><a onClick={this.voteOnPic.bind(this, this.state.test)} href="#">Vote</a></li>
           </ul>    
       </div>
     );

@@ -49,7 +49,11 @@ export default class HttpService {
     static put(url, data) {
 
         return fetch("/" + url, {
-            headers: { 'Content-type' : 'application/json'},
+            headers: { 
+                'Content-type' : 'application/json',
+                'x-access-token' : localStorage.getItem('auth-token'),
+                'userId' : localStorage.getItem('userId')                
+            },
             method: 'put',
             body: JSON.stringify(data)
         })

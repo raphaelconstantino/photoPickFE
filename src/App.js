@@ -8,6 +8,7 @@ class App extends Component {
 
         HttpService.post("authenticate", {login: "rod", password: "123"})
         //HttpService.post("authenticate", {login: "rapha", password: "123"})
+        //HttpService.post("authenticate", {login: "dani", password: "123"})
         .then(response => {
                 localStorage.setItem('auth-token', response['x-access-token']);
                 localStorage.setItem('userId', response['userId']);
