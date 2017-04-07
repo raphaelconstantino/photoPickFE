@@ -53,7 +53,7 @@ class InsertTest extends Component {
                 'category' : this.state.category            
             },
             method: 'post',
-            body: uploadFiles(document.querySelector('input[type="file"]').files)
+            body: uploadFiles(document.querySelector('input[type="file"]').files) // TODO - Fix querySelector
         })
 
 	}
