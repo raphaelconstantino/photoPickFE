@@ -6,6 +6,7 @@ class App extends Component {
     render() {
         return (
             <div className="wrapper"> 
+                <Link to="/logout">Logout</Link>
                 <Link to="/tests">Tests</Link>
                 <Link to="/vote">Vote</Link>
  
