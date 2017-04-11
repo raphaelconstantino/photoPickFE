@@ -63,9 +63,14 @@ class InsertTest extends Component {
             <div className="Tests">
                 <h1> Insert New Test!</h1>
                 <form role="form" onSubmit={this.sendData.bind(this)}>
-                    <input type="text" name="category" value={this.state.category} onChange={this.setField.bind(this, "category")} />
-                    <br/>
-                    <input type="file" name="file" value={this.state.file} onChange={this.setField.bind(this, "file")} />
+                    <div className="form-group">    
+                        <label htmlFor="category">Category:</label>
+                        <input className="form-control" id="category" type="text" name="category" value={this.state.category} onChange={this.setField.bind(this, "category")} />
+                    </div>    
+                    <div className="form-group">        
+                        <label htmlFor="upload">Upload Photo:</label>
+                        <input id="upload" className="form-control" type="file" name="file" value={this.state.file} onChange={this.setField.bind(this, "file")} />
+                    </div>    
                     <button className="btn btn-info" type="submit">Submit</button>
                 </form>    
             </div>
