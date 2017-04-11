@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import HttpService from '../../util/HttpService';
 
 class InsertTest extends Component {
   
@@ -44,8 +43,10 @@ class InsertTest extends Component {
            
         }
 
-        console.log(uploadFiles(document.querySelector('input[type="file"]').files))
-
+        
+        /**
+         * TODO - Fix hard http call
+         */
         return fetch("/tests", {
             headers: { 
                 'x-access-token' : localStorage.getItem('auth-token'),

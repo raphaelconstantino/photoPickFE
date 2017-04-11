@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import HttpService from '../../util/HttpService';
-import img from '../../files/img.jpg'
 
 class VoteBox extends Component { 
 
@@ -26,7 +25,7 @@ class VoteBox extends Component {
       <div className="Tests">
           <ul>
             <li>{this.state.test.category}</li>
-            <li><img src={img} height="250px" width="250px"/></li>
+            <li><img alt="" src={"image/" + this.state.test.file} height="250px" width="250px"/></li>
             <li><a onClick={this.voteOnPic.bind(this, this.state.test)} href="#">Vote</a></li>
           </ul>    
       </div>

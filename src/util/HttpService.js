@@ -39,6 +39,11 @@ export default class HttpService {
     static del(url) {
 
         return fetch("/" + url, {
+            headers: { 
+                'Content-type' : 'application/json',
+                'x-access-token' : localStorage.getItem('auth-token'),
+                'userId' : localStorage.getItem('userId')                
+            },            
             method: 'delete'
         })
         .then(res => this._handleErrors(res))

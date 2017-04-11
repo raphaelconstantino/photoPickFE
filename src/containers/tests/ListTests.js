@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import img from '../../files/img.jpg'
 
 class ListTests extends Component {
 
@@ -10,7 +9,7 @@ class ListTests extends Component {
     getUrl (o) {
         // TODO - remove hardcode
         return (
-            <img src={img} height="250px" width="250px"/>
+            <img alt="" src={"image/" + o.file} height="250px" width="250px"/>
         );
     }
 
