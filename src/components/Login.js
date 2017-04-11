@@ -16,7 +16,6 @@ export default class Login extends Component {
         HttpService.post("authenticate", {login: this.login.value, password: this.senha.value})
         .then(response => {
                 localStorage.setItem('auth-token', response['x-access-token']);
-                localStorage.setItem('userId', response['userId']);
                 browserHistory.push('/tests');
             });
 

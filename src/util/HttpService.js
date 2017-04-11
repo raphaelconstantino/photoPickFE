@@ -10,8 +10,7 @@ export default class HttpService {
 
         return fetch("/" + url, {
             headers : {
-                'x-access-token' : localStorage.getItem('auth-token'),
-                'userId' : localStorage.getItem('userId')
+                'x-access-token' : localStorage.getItem('auth-token')
             },
             method: 'get'
         })
@@ -25,8 +24,7 @@ export default class HttpService {
         return fetch("/" + url, {
             headers: { 
                 'Content-type' : 'application/json',
-                'x-access-token' : localStorage.getItem('auth-token'),
-                'userId' : localStorage.getItem('userId')                
+                'x-access-token' : localStorage.getItem('auth-token')             
             },
             method: 'post',
             body: JSON.stringify(data)
@@ -41,8 +39,7 @@ export default class HttpService {
         return fetch("/" + url, {
             headers: { 
                 'Content-type' : 'application/json',
-                'x-access-token' : localStorage.getItem('auth-token'),
-                'userId' : localStorage.getItem('userId')                
+                'x-access-token' : localStorage.getItem('auth-token')             
             },            
             method: 'delete'
         })
@@ -56,8 +53,7 @@ export default class HttpService {
         return fetch("/" + url, {
             headers: { 
                 'Content-type' : 'application/json',
-                'x-access-token' : localStorage.getItem('auth-token'),
-                'userId' : localStorage.getItem('userId')                
+                'x-access-token' : localStorage.getItem('auth-token')             
             },
             method: 'put',
             body: JSON.stringify(data)

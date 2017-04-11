@@ -16,7 +16,7 @@ class VoteBox extends Component {
 	}   
 
   voteOnPic(test) {
-		HttpService.put("tests/" + test._id, {"userVotingId":localStorage.getItem('userId'), "comment":"I would Date!", "atractive" : "3", "smart" : "3", "trustworthy" : "3" })
+		HttpService.put("tests/" + test._id, { "comment":"I would Date!", "atractive" : "3", "smart" : "3", "trustworthy" : "3" })
 			.then(response => console.log(response));
   }
 

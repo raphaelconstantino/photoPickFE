@@ -50,7 +50,6 @@ class InsertTest extends Component {
         return fetch("/tests", {
             headers: { 
                 'x-access-token' : localStorage.getItem('auth-token'),
-                'userId' : localStorage.getItem('userId'),
                 'category' : this.state.category            
             },
             method: 'post',
