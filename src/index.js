@@ -21,7 +21,7 @@ ReactDOM.render(
 			<Route path="/login" component={Login} />
 			<Route path="/logout" component={Logout}/>
 			<Route path="/" component={App} onEnter={verificaAutenticacao} >
-		  	<IndexRoute component={TestsBox}/>
+		  	<IndexRoute component={TestsBox} onEnter={verificaAutenticacao}/>
 				<Route path="/tests" component={TestsBox} onEnter={verificaAutenticacao}/>
 				<Route path="/vote" component={VoteBox} onEnter={verificaAutenticacao}/>
 		</Route>  	

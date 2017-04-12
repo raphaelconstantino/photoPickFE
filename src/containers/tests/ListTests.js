@@ -9,7 +9,7 @@ class ListTests extends Component {
     getUrl (o) {
         // TODO - remove hardcode
         return (
-            <img alt="" src={"image/" + o.file} height="250px" width="250px"/>
+            <img alt="" src={"image/" + o.file + "?x-access-token=" + localStorage.getItem('auth-token')} height="250px" width="250px"/>
         );
     }
 

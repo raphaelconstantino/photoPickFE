@@ -27,7 +27,7 @@ class VoteBox extends Component {
       return (
           <ul>
             <li>{this.state.test.category}</li>
-            <li><img alt="" src={"image/" + this.state.test.file} height="250px" width="250px"/></li>
+            <li><img alt="" src={"image/" + this.state.test.file + "?x-access-token=" + localStorage.getItem('auth-token')} height="250px" width="250px"/></li>
             <li><a onClick={this.voteOnPic.bind(this)} href="#">Vote</a></li>
           </ul>    
       )
